@@ -1,0 +1,4 @@
+﻿  position.cpp
+  aoeShape.cpp
+  Generating Code...
+c:\users\jango\documents\chaosunbound\chaosunbound\chaosunbound\aoeshape.cpp(16): error C4716: 'Cone::getTiles': must return a value
