@@ -1,6 +1,6 @@
 #include "card.h"
 
-Card::Card(int id, std::string n, std::string d, CardType t, int pos, int c, std::vector<CardEffect> e, std::vector<PassiveEffect> p)
+Card::Card(int id, std::string n, std::string d, CardType t, int pos, int c, std::vector<CardEffect*> e, std::vector<PassiveEffect*> p)
 	: id(id), name(n), cardDescription(d), type(t), position{ pos, pos }, cost(c), effects(e), passives(p) {};
 
 int Card::getid() {
@@ -24,9 +24,9 @@ std::vector<int> Card::getPosition() {
 int Card::getCost() {
 	return cost;
 }
-std::vector<CardEffect> Card::getEffects() {
+std::vector<CardEffect*> Card::getEffects() {
 	return effects;
 }
-std::vector<PassiveEffect> Card::getPassives() {
+std::vector<PassiveEffect*> Card::getPassives() {
 	return passives;
 }

@@ -16,6 +16,9 @@ int HexPos::operator[](unsigned int i) {
 	else
 		return -1;
 }
+bool HexPos::operator==(HexPos other) {
+	return other[0] == this->id[0] && other[1] == this->id[1];
+}
 HexPos HexPos::getDirection(HexPos origin, HexPos target) {
 	int x = target[0] - origin[0];
 	int y = target[1] - origin[1];

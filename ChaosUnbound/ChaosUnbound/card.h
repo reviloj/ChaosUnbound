@@ -3,9 +3,8 @@
 #include <string>
 #include <vector>
 #include "enum.h"
+#include "effect.h"
 
-class CardEffect;
-class PassiveEffect;
 class Player;
 
 class Card {
@@ -16,10 +15,10 @@ class Card {
 	CardType type;
 	std::vector<int> position;
 	int cost;
-	std::vector<CardEffect> effects;
-	std::vector<PassiveEffect> passives;
+	std::vector<CardEffect*> effects;
+	std::vector<PassiveEffect*> passives;
 public:
-	Card(int id, std::string n, std::string d, CardType t, int pos, int c, std::vector<CardEffect> e, std::vector<PassiveEffect> p);
+	Card(int id, std::string n, std::string d, CardType t, int pos, int c, std::vector<CardEffect*> e, std::vector<PassiveEffect*> p);
 	void discard();
 	int getid();
 	Player* getPlayer();
@@ -28,6 +27,6 @@ public:
 	CardType getType();
 	std::vector<int> getPosition();
 	int getCost();
-	std::vector<CardEffect> getEffects();
-	std::vector<PassiveEffect> getPassives();
+	std::vector<CardEffect*> getEffects();
+	std::vector<PassiveEffect*> getPassives();
 };

@@ -13,6 +13,7 @@ public:
 	HexPos(int id[]);
 	HexPos(int x, int y);
 	int operator[](unsigned int i); 
+	bool operator==(HexPos other);
 	int* getid();
 	static HexPos getDirection(HexPos origin, HexPos target);
 	std::string toString();
